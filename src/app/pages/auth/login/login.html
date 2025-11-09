@@ -1,0 +1,65 @@
+<div class="login-page">
+  <!-- Left panel (hidden on mobile) -->
+  <div class="login-panel left-panel">
+    <div class="left-content">
+      <h1>{{ 'LOGIN.TITLE' | translate }}</h1>
+    </div>
+  </div>
+
+  <!-- Right panel -->
+  <div class="login-panel right-panel">
+    <!-- Floating dark mode & language -->
+    <div class="floating-buttons">
+      <!-- Dark Mode Toggle -->
+      <app-theme-settings-button></app-theme-settings-button>
+
+      <!-- Language Select -->
+      <app-language-settings-button></app-language-settings-button>
+      
+    </div>
+
+    <!-- Login Card -->
+    <div class="login-card">
+      <h2>{{ 'LOGIN.LOGIN' | translate }}</h2>
+
+      <div class="form-group">
+        <label for="email">{{ 'LOGIN.EMAIL' | translate }}</label>
+        <input
+          id="email"
+          pInputText
+          [(ngModel)]="email"
+          placeholder="{{ 'LOGIN.EMAIL' | translate }}"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">{{ 'LOGIN.PASSWORD' | translate }}</label>
+        <input
+          id="password"
+          type="password"
+          pInputText
+          [(ngModel)]="password"
+          placeholder="{{ 'LOGIN.PASSWORD' | translate }}"
+        />
+      </div>
+
+      <div class="form-group remember-me">
+        <p-checkbox [(ngModel)]="rememberMe" binary="true" inputId="remember"></p-checkbox>
+        <label for="remember">{{ 'LOGIN.REMEMBER_ME' | translate }}</label>
+      </div>
+
+      <button
+        pButton
+        class="login-btn"
+        type="button"
+        label="{{ 'LOGIN.BUTTON' | translate }}"
+        (click)="login()"
+      ></button>
+
+      <p class="register-link">
+        {{ 'LOGIN.NO_ACCOUNT' | translate }}
+        <a (click)="goToRegister()">{{ 'LOGIN.REGISTER' | translate }}</a>
+      </p>
+    </div>
+  </div>
+</div>

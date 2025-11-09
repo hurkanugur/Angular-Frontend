@@ -1,0 +1,16 @@
+@if (env.features.enableThemeSwitching) {
+<button pButton type="button" icon="pi pi-palette" (click)="op.toggle($event)"></button>
+
+<p-popover #op [dismissable]="true">
+    <div class="theme-panel">
+        <div class="field">
+            <label for="darkMode">{{'THEME.DARK_THEME' | translate}}</label>
+            <p-toggleSwitch id="darkMode" [(ngModel)]="darkMode" (onChange)="toggleDarkMode($event)"></p-toggleSwitch>
+        </div>
+
+        <div class="color-grid">
+            <div *ngFor="let option of paletteOptions" class="color-circle" [style.background]="option.color" [class.selected]="option.name === selectedPalette" pTooltip="{{ option.name | titlecase }}" tooltipPosition="top" (click)="selectPalette(option.name)"></div>
+        </div>
+    </div>
+</p-popover>
+}

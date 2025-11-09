@@ -1,0 +1,18 @@
+@if (env.features.enableMultiLanguage) {
+<button pButton type="button" icon="pi pi-globe" (click)="op.toggle($event)"></button>
+
+<p-popover #op [dismissable]="true">
+    <div class="language-panel">
+        <h4>{{ 'LANGUAGE.TITLE' | translate }}</h4>
+
+        <div class="language-list">
+            @for (lang of languages; track lang.code) {
+            <div class="language-option" (click)="selectLanguage(lang.code)" [class.selected]="selectedLang === lang.code" tooltipPosition="top">
+                <span class="flag">{{ lang.flag }}</span>
+                <span class="label">{{ lang.label }}</span>
+            </div>
+            }
+        </div>
+    </div>
+</p-popover>
+}
