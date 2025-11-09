@@ -1,0 +1,33 @@
+{
+  "LOGIN": {
+    "TITLE": "Willkommen zurück!",
+    "LOGIN": "Anmelden",
+    "EMAIL": "E-Mail-Adresse",
+    "PASSWORD": "Passwort",
+    "BUTTON": "Anmelden",
+    "NO_ACCOUNT": "Noch kein Konto?",
+    "REGISTER": "Jetzt registrieren",
+    "REMEMBER_ME": "Angemeldet bleiben"
+  },
+  "REGISTER": {
+    "TITLE": "Konto erstellen",
+    "REGISTER": "Registrierung",
+    "FULL_NAME": "Vollständiger Name",
+    "EMAIL": "E-Mail-Adresse",
+    "PASSWORD": "Passwort",
+    "CONFIRM_PASSWORD": "Passwort bestätigen",
+    "BUTTON": "Registrieren",
+    "HAVE_ACCOUNT": "Schon ein Konto?",
+    "LOGIN": "Anmelden"
+  },
+  "THEME": {
+    "SELECT": "Thema auswählen",
+    "LIGHT": "Helles Design",
+    "DARK": "Dunkles Design"
+  },
+  "LANGUAGE": {
+    "SELECT": "Sprache auswählen",
+    "ENGLISH": "Englisch",
+    "GERMAN": "Deutsch"
+  }
+}

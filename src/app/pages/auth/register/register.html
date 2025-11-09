@@ -1,0 +1,32 @@
+<div class="register-container">
+  <div class="register-card">
+    <h1>{{ 'REGISTER.REGISTER' | translate }}</h1>
+
+    <div class="form-group">
+      <label for="fullName">{{ 'REGISTER.FULL_NAME' | translate }}</label>
+      <input id="fullName" pInputText [(ngModel)]="fullName" placeholder="{{ 'REGISTER.FULL_NAME' | translate }}" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">{{ 'REGISTER.EMAIL' | translate }}</label>
+      <input id="email" pInputText [(ngModel)]="email" placeholder="{{ 'REGISTER.EMAIL' | translate }}" />
+    </div>
+
+    <div class="form-group">
+      <label for="password">{{ 'REGISTER.PASSWORD' | translate }}</label>
+      <input id="password" type="password" pInputText [(ngModel)]="password" placeholder="{{ 'REGISTER.PASSWORD' | translate }}" />
+    </div>
+
+    <div class="form-group">
+      <label for="confirmPassword">{{ 'REGISTER.CONFIRM_PASSWORD' | translate }}</label>
+      <input id="confirmPassword" type="password" pInputText [(ngModel)]="confirmPassword" placeholder="{{ 'REGISTER.CONFIRM_PASSWORD' | translate }}" />
+    </div>
+
+    <button pButton type="button" label="{{ 'REGISTER.BUTTON' | translate }}" (click)="register()"></button>
+
+    <p class="login-link">
+      {{ 'REGISTER.HAVE_ACCOUNT' | translate }}
+      <a (click)="goToLogin()">{{ 'REGISTER.LOGIN' | translate }}</a>
+    </p>
+  </div>
+</div>
